@@ -29,9 +29,11 @@ export function About() {
           </p>
 
           <div className="pt-6 flex justify-center">
-            <Button className="gap-2">
-              <FileText className="h-4 w-4" />
-              Download Resume
+            <Button asChild className="gap-2">
+              <a href="Ashish_Full_Stack_Engineer.pdf" download="Ashish_Jadhav_Full_Stack.pdf">
+                <FileText className="h-4 w-4" />
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>
