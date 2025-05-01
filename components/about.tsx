@@ -24,8 +24,8 @@ export function About() {
           </p>
 
           <p>
-            Based in Karnataka, India, I'm fluent in multiple languages including English, Hindi, Marathi, Kannada, and
-            Tamil, which helps me collaborate effectively with diverse teams.
+            Based in Karnataka, India, I'm fluent in multiple languages including English, Hindi, Marathi, Kannada  and
+            Tamil which helps me collaborate effectively with diverse teams.
           </p>
 
           <div className="pt-6 flex justify-center">
