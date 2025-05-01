@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { siteMetadata } from './metadata'
+import { Providers } from "@/components/providers"
 
 export const metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -34,12 +35,14 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }
