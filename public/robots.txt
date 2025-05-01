@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ashishjadhav.com/sitemap.xml

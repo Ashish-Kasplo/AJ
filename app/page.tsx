@@ -8,22 +8,26 @@ import { Achievements } from "@/components/achievements"
 import { Certifications } from "@/components/certifications"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { PersonJsonLd } from '@/components/JsonLd'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Achievements />
-        <Certifications />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <PersonJsonLd />
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Achievements />
+          <Certifications />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </>
   )
 }
