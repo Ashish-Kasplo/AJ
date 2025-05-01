@@ -6,8 +6,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />, href: "https://github.com", label: "GitHub" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: <Github className="h-5 w-5" />, href: "https://github.com/Ashish-Kasplo  ", label: "GitHub" },
+    { icon: <Linkedin className="h-5 w-5" />, href: "https://in.linkedin.com/in/ashish-s-jadhav-560909204", label: "LinkedIn" },
     { icon: <Mail className="h-5 w-5" />, href: "mailto:ashishbox13@gmail.com", label: "Email" },
   ]
 
