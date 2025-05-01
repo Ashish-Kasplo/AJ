@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { BarChart, Clock, Code, Globe, Layout, ShoppingCart, Users } from "lucide-react"
+import { BarChart, Clock, Code, Component, Globe, HardHatIcon, Layout, ShoppingCart, SignalMedium, Users } from "lucide-react"
 
 export function Achievements() {
   const achievements = [
@@ -16,7 +16,7 @@ export function Achievements() {
         "Boosted website and API performance by optimizing backend logic and frontend rendering, reducing load times by up to 30%.",
     },
     {
-      icon: <Users className="h-10 w-10 text-primary" />,
+      icon: <HardHatIcon className="h-10 w-10 text-primary" />,
       title: "Cross-functional Leadership",
       description:
         "Led cross-functional product initiatives in email marketing, customer review systems, and e-learning platforms.",
@@ -50,6 +50,12 @@ export function Achievements() {
       title: "Admin Panel Development",
       description:
         "Built and managed powerful admin panels across various platforms, streamlining internal operations and improving client data management.",
+    },
+    {
+      icon: <Component className="h-10 w-10 text-primary" />,
+      title: "Library Package Development",
+      description:
+        " Created own component packages to be reusable.",
     },
   ]
 

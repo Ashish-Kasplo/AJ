@@ -15,6 +15,14 @@ export function Certifications() {
       title: "Mastery of Full Stack Development",
       issuer: "Web Development Academy",
     },
+    {
+      title: "Fundamentals of Coding",
+      issuer: "Verzeo Institute",
+    },
+    {
+      title: "GPRC , Go Backend Mastey",
+      issuer: "Udemy",
+    },
   ]
 
   const languages = [

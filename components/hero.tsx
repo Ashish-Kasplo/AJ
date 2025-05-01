@@ -7,21 +7,34 @@ import Image from "next/image"
 
 export function Hero() {
   const [typedText, setTypedText] = useState("")
-  const fullText = "Full Stack Software Engineer"
+  const [currentTextIndex, setCurrentTextIndex] = useState(0)
+  const texts = [
+    "Full Stack Developer",
+    "Problem Solver",
+    "System Architect",
+    "Innovation Driver"
+  ]
 
   useEffect(() => {
     let currentIndex = 0
+    let currentText = texts[currentTextIndex]
+    
     const typingInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setTypedText(fullText.slice(0, currentIndex))
+      if (currentIndex <= currentText.length) {
+        setTypedText(currentText.slice(0, currentIndex))
         currentIndex++
       } else {
         clearInterval(typingInterval)
+        // Wait for 2 seconds before starting to type the next text
+        setTimeout(() => {
+          setCurrentTextIndex((prev) => (prev + 1) % texts.length)
+          currentIndex = 0
+        }, 2000)
       }
     }, 100)
 
     return () => clearInterval(typingInterval)
-  }, [])
+  }, [currentTextIndex])
 
   return (
     <section className="relative min-h-screen flex items-center pt-16">
@@ -50,12 +63,12 @@ export function Hero() {
           </div>
           <div className="flex gap-4 pt-4">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/Ashish-Kasplo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://in.linkedin.com/in/ashish-s-jadhav-560909204" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
@@ -69,7 +82,7 @@ export function Hero() {
         <div className="flex justify-center md:justify-end">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20">
             <Image
-              src="/placeholder.svg?height=320&width=320"
+              src="/images/profile.png?height=320&width=320"
               alt="Ashish Jadhav"
               fill
               className="object-cover"

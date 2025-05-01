@@ -41,16 +41,34 @@ export function Experience() {
       degree: "Bachelors in Computer Application Technology",
       institution: "Jain University Bangalore",
       period: "2017 – 2020",
+      studies: [
+        "Mastered core Computer Science fundamentals including Data Structures, Algorithms, and Object-Oriented Programming",
+        "Developed a full-stack E-commerce platform as final year project using MERN stack",
+        "Completed courses in Database Management Systems, Web Development, and Software Engineering",
+        "Participated in various coding competitions and hackathons",
+      ],
     },
     {
       degree: "Pre University in Computer Science",
       institution: "Jain University",
       period: "2017 – 2020",
+      studies: [
+        "Studied Computer Science fundamentals including C++, Basic Programming concepts",
+        "Learned core subjects like Physics, Chemistry, and Mathematics",
+        "Participated in technical workshops and programming competitions",
+        "Developed strong analytical and problem-solving skills",
+      ],
     },
     {
       degree: "High Schooling",
       institution: "Geetha Shishu Shikshana Sangha [GSSS] Mysore",
       period: "2017 – 2020",
+      studies: [
+        "Developed strong foundation in Mathematics and Science",
+        "Enhanced communication and interpersonal skills through various extracurricular activities",
+        "Participated in school leadership programs and cultural events",
+        "Achieved academic excellence with distinction in core subjects",
+      ],
     },
   ]
 
@@ -92,14 +110,23 @@ export function Experience() {
           <div>
             <h3 className="text-2xl font-bold mb-6 text-center md:text-left mt-8 md:mt-0">Education</h3>
             <div className="space-y-6">
-              {education.map((edu, index) => (
+            {education.map((edu, index) => (
                 <Card key={index}>
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start flex-wrap gap-2 mb-2">
-                      <h4 className="text-lg font-semibold">{edu.degree}</h4>
+                  <CardHeader className="pb-2">
+                    <div className="flex justify-between items-start flex-wrap gap-2">
+                      <div>
+                        <h4 className="text-xl font-semibold">{edu.degree}</h4>
+                        <p className="text-muted-foreground">{edu.institution}</p>
+                      </div>
                       <Badge variant="outline">{edu.period}</Badge>
                     </div>
-                    <p className="text-muted-foreground">{edu.institution}</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="list-disc pl-5 space-y-1 text-sm">
+                      {edu.studies.map((resp, idx) => (
+                        <li key={idx}>{resp}</li>
+                      ))}
+                    </ul>
                   </CardContent>
                 </Card>
               ))}

@@ -24,14 +24,16 @@ export function About() {
           </p>
 
           <p>
-            Based in Karnataka, India, I'm fluent in multiple languages including English, Hindi, Marathi, Kannada, and
-            Tamil, which helps me collaborate effectively with diverse teams.
+            Based in Karnataka, India, I'm fluent in multiple languages including English, Hindi, Marathi, Kannada  and
+            Tamil which helps me collaborate effectively with diverse teams.
           </p>
 
           <div className="pt-6 flex justify-center">
-            <Button className="gap-2">
-              <FileText className="h-4 w-4" />
-              Download Resume
+            <Button asChild className="gap-2">
+              <a href="Ashish_Full_Stack_Engineer.pdf" download="Ashish_Jadhav_Full_Stack.pdf">
+                <FileText className="h-4 w-4" />
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>
