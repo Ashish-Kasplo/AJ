@@ -82,7 +82,7 @@ export function Hero() {
         <div className="flex justify-center md:justify-end">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20">
             <Image
-              src="/placeholder.svg?height=320&width=320"
+              src="/images/profile.png?height=320&width=320"
               alt="Ashish Jadhav"
               fill
               className="object-cover"
