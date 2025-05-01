@@ -51,7 +51,11 @@ export function Header() {
             </div>
 
             {isMenuOpen && (
-              <div className="fixed inset-0 top-16 bg-background z-40 p-4">
+              <div 
+                className={`fixed inset-0 top-16 z-[367760] p-4 ${
+                  !scrolled ? "bg-background/95 backdrop-blur-md" : "bg-background"
+                }`}
+              >
                 <nav className="flex flex-col gap-4">
                   {navItems.map((item) => (
                     <Link
