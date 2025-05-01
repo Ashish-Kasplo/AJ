@@ -29,15 +29,26 @@ export function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false)
-    setSubmitSuccess(true)
-    setFormData({ name: "", email: "", subject: "", message: "" })
+      if (!response.ok) throw new Error('Failed to send message');
 
-    // Reset success message after 3 seconds
-    setTimeout(() => setSubmitSuccess(false), 3000)
+      setSubmitSuccess(true)
+      setFormData({ name: "", email: "", subject: "", message: "" })
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false)
+      setTimeout(() => setSubmitSuccess(false), 3000)
+    }
   }
 
   const contactInfo = [
@@ -131,7 +142,7 @@ export function Contact() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="John Doe"
+                        placeholder="Ashish"
                         required
                         aria-required="true"
                         itemProp="name"
@@ -147,7 +158,7 @@ export function Contact() {
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="john.doe@example.com"
+                        placeholder="example@gmail.com"
                         required
                         aria-required="true"
                         itemProp="email"
@@ -178,7 +189,7 @@ export function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell me about your project..."
+                      placeholder="Tell me about your requirement..."
                       rows={6}
                       required
                       aria-required="true"
