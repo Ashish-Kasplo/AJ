@@ -30,9 +30,9 @@ export function About() {
 
           <div className="pt-6 flex justify-center">
             <Button asChild className="gap-2">
-              <a href="Ashish_Full_Stack_Engineer.pdf" download="Ashish_Jadhav_Full_Stack.pdf">
+              <a href="/Ashish_Jadhav_Full_Stack.pdf" download="Ashish_Jadhav_Full_Stack.pdf">
                 <FileText className="h-4 w-4" />
-                Download Resume
+                Download Ashish_Jadhav_Full_Stack Resume
               </a>
             </Button>
           </div>
