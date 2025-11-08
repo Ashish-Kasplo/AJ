@@ -32,7 +32,7 @@ export function About() {
             <Button asChild className="gap-2">
               <a href="/Ashish_Jadhav_Full_Stack.pdf" download="Ashish_Jadhav_Full_Stack.pdf">
                 <FileText className="h-4 w-4" />
-                Download Ashish_Jadhav_Full_Stack Resume
+                Download Resume
               </a>
             </Button>
           </div>
