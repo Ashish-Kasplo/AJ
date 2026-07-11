@@ -1,20 +1,21 @@
 export const siteMetadata = {
-  title: "Ashish Jadhav - Web Developer Portfolio",
-  description: "Full-stack web developer specializing in React, Next.js, and modern web technologies. Based in Karnataka, India.",
+  title: "Ashish S Jadhav - Senior Frontend Engineer Portfolio",
+  description:
+    "Senior Frontend Engineer specializing in React, Next.js, TypeScript and enterprise SaaS interfaces. Portfolio built around scalable frontend systems, workflow builders and performance-focused delivery.",
   author: "Ashish Jadhav",
   siteUrl: "https://ashishjadhav.com", // Replace with your actual domain
   keywords: [
-    "web developer",
-    "full stack developer",
+    "Ashish S Jadhav",
+    "Senior Frontend Engineer",
     "React developer",
     "Next.js developer",
-    "Karnataka",
-    "India",
-    "software engineer",
+    "TypeScript",
+    "enterprise SaaS",
+    "frontend portfolio",
   ],
   social: {
     twitter: "@ashishjadhav", // Replace with your handle
-    github: "https://github.com/ashishjadhav",
-    linkedin: "https://linkedin.com/in/ashishjadhav",
+    github: "https://github.com/Ashishjadhav-dev",
+    linkedin: "https://linkedin.com/in/ashish-s-jadhav",
   }
 }
