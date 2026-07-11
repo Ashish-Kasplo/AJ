@@ -1,85 +1,44 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { BarChart, Clock, Code, Component, Globe, HardHatIcon, Layout, ShoppingCart, SignalMedium, Users } from "lucide-react"
+import { achievements } from "@/lib/portfolio"
+import { ArrowUpRight, Layers3, Sparkles, Zap } from "lucide-react"
+
+const icons = [Zap, ArrowUpRight, Layers3, Sparkles]
 
 export function Achievements() {
-  const achievements = [
-    {
-      icon: <BarChart className="h-10 w-10 text-primary" />,
-      title: "Revenue Growth",
-      description:
-        "Increased company revenue by 4× through the successful launch and optimization of a proprietary email deliverability platform.",
-    },
-    {
-      icon: <Clock className="h-10 w-10 text-primary" />,
-      title: "Performance Optimization",
-      description:
-        "Boosted website and API performance by optimizing backend logic and frontend rendering, reducing load times by up to 30%.",
-    },
-    {
-      icon: <HardHatIcon className="h-10 w-10 text-primary" />,
-      title: "Cross-functional Leadership",
-      description:
-        "Led cross-functional product initiatives in email marketing, customer review systems, and e-learning platforms.",
-    },
-    {
-      icon: <Layout className="h-10 w-10 text-primary" />,
-      title: "Frontend Management",
-      description:
-        "Independently managed frontend development for multiple products, ensuring consistent design systems and responsiveness.",
-    },
-    {
-      icon: <ShoppingCart className="h-10 w-10 text-primary" />,
-      title: "Shopify App Development",
-      description:
-        "Designed and launched the company's first Shopify app for customer reviews, driving additional revenue streams and enhancing brand visibility.",
-    },
-    {
-      icon: <Users className="h-10 w-10 text-primary" />,
-      title: "Client Onboarding",
-      description:
-        "Spearheaded client onboarding, including domain configuration, integration, and tailored product demos — significantly improving activation rates.",
-    },
-    {
-      icon: <Globe className="h-10 w-10 text-primary" />,
-      title: "Website Development",
-      description:
-        "Solely developed and maintained the company's main website, enhancing lead conversion through UI improvements and SEO strategies.",
-    },
-    {
-      icon: <Code className="h-10 w-10 text-primary" />,
-      title: "Admin Panel Development",
-      description:
-        "Built and managed powerful admin panels across various platforms, streamlining internal operations and improving client data management.",
-    },
-    {
-      icon: <Component className="h-10 w-10 text-primary" />,
-      title: "Library Package Development",
-      description:
-        " Created own component packages to be reusable.",
-    },
-  ]
-
   return (
-    <section id="achievements" className="py-20 bg-muted/30">
+    <section id="achievements" className="border-t border-border/60 bg-muted/40 py-20 text-foreground">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold">Key Achievements</h2>
-          <div className="mt-2 h-1 w-20 bg-primary mx-auto"></div>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Highlights of my professional accomplishments and contributions.
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="text-sm uppercase tracking-[0.35em] text-cyan-700 dark:text-cyan-300/80">Highlights</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Measurable outcomes that show how the work landed.
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-muted-foreground">
+            These cards turn the strongest résumé outcomes into a clean portfolio summary.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {achievements.map((achievement, index) => (
-            <Card key={index} className="overflow-hidden">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="mb-4">{achievement.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{achievement.title}</h3>
-                <p className="text-muted-foreground">{achievement.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {achievements.map((item, index) => {
+            const Icon = icons[index % icons.length]
+
+            return (
+              <Card key={item.title} className="border-border bg-card text-card-foreground backdrop-blur">
+                <CardContent className="space-y-4 p-6">
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300 ring-1 ring-cyan-300/20">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <p className="text-2xl font-semibold text-card-foreground">{item.metric}</p>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold text-card-foreground">{item.title}</h3>
+                    <p className="text-sm leading-6 text-muted-foreground">{item.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            )
+          })}
         </div>
       </div>
     </section>

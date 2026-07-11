@@ -6,7 +6,7 @@ export function PersonJsonLd() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
-          name: "Ashish Jadhav",
+          name: "Ashish S Jadhav",
           url: "https://ashishjadhav.com",
           email: "ashishbox13@gmail.com",
           telephone: "+91-8073392045",
@@ -16,11 +16,11 @@ export function PersonJsonLd() {
             addressCountry: "India"
           },
           sameAs: [
-            "https://github.com/ashishjadhav",
-            "https://linkedin.com/in/ashishjadhav"
+            "https://github.com/Ashishjadhav-dev",
+            "https://linkedin.com/in/ashish-s-jadhav"
           ],
-          jobTitle: "Web Developer",
-          description: "Full-stack web developer specializing in React, Next.js, and modern web technologies"
+          jobTitle: "Senior Frontend Engineer",
+          description: "Frontend Engineer specializing in React, Next.js, TypeScript and enterprise SaaS interfaces"
         })
       }}
     />

@@ -1,136 +1,52 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { experiences } from "@/lib/portfolio"
 
 export function Experience() {
-  const experiences = [
-    {
-      title: "Software Engineer",
-      company: "Kasplo Pvt Ltd",
-      period: "March 2024 – May 2025",
-      responsibilities: [
-        "Led full-stack development initiatives, delivering end-to-end solutions across both frontend and backend.",
-        "Spearheaded major frontend product features using modern frameworks (e.g., React, Material-UI, Tailwind CSS).",
-        "Automated and optimized message queue processes (e.g., RabbitMQ), ensuring efficient communication between services and reducing system downtime.",
-        "Collaborated closely with cross-functional teams to implement scalable architecture for client-facing platforms.",
-      ],
-    },
-    {
-      title: "Junior Software Engineer",
-      company: "Kasplo Pvt Ltd",
-      period: "Dec 2023 – March 2024",
-      responsibilities: [
-        "Developed robust, user-friendly Admin Panels for managing client data and product configurations.",
-        "Designed and launched the company's official website using modern frontend technologies, improving brand visibility and client onboarding experience.",
-        "Worked with design and backend teams to ensure seamless user experience and data integration.",
-      ],
-    },
-    {
-      title: "Software Intern",
-      company: "Parinitha Technologies",
-      period: "July 2023 – Nov 2023",
-      responsibilities: [
-        "Contributed to complex web applications using the MERN Stack (MongoDB, Express.js, React.js, Node.js).",
-        "Focused on building responsive and dynamic frontend components to enhance user experience.",
-        "Participated in code reviews, debugging sessions, and agile sprint planning, gaining hands-on exposure to real-world development workflows.",
-      ],
-    },
-  ]
-
-  const education = [
-    {
-      degree: "Bachelors in Computer Application Technology",
-      institution: "Jain University Bangalore",
-      period: "2017 – 2020",
-      studies: [
-        "Mastered core Computer Science fundamentals including Data Structures, Algorithms, and Object-Oriented Programming",
-        "Developed a full-stack E-commerce platform as final year project using MERN stack",
-        "Completed courses in Database Management Systems, Web Development, and Software Engineering",
-        "Participated in various coding competitions and hackathons",
-      ],
-    },
-    {
-      degree: "Pre University in Computer Science",
-      institution: "Jain University",
-      period: "2017 – 2020",
-      studies: [
-        "Studied Computer Science fundamentals including C++, Basic Programming concepts",
-        "Learned core subjects like Physics, Chemistry, and Mathematics",
-        "Participated in technical workshops and programming competitions",
-        "Developed strong analytical and problem-solving skills",
-      ],
-    },
-    {
-      degree: "High Schooling",
-      institution: "Geetha Shishu Shikshana Sangha [GSSS] Mysore",
-      period: "2017 – 2020",
-      studies: [
-        "Developed strong foundation in Mathematics and Science",
-        "Enhanced communication and interpersonal skills through various extracurricular activities",
-        "Participated in school leadership programs and cultural events",
-        "Achieved academic excellence with distinction in core subjects",
-      ],
-    },
-  ]
-
   return (
-    <section id="experience" className="py-20 bg-muted/30">
+    <section id="experience" className="border-t border-border/60 bg-muted/40 py-20 text-foreground">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold">Experience & Education</h2>
-          <div className="mt-2 h-1 w-20 bg-primary mx-auto"></div>
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="text-sm uppercase tracking-[0.35em] text-cyan-700 dark:text-cyan-300/80">Experience</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Building enterprise frontend systems end to end.
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-muted-foreground">
+            These are the roles and responsibilities reflected in your resume, rewritten to read cleanly on the site.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div>
-            <h3 className="text-2xl font-bold mb-6 text-center md:text-left">Work Experience</h3>
-            <div className="space-y-6">
-              {experiences.map((exp, index) => (
-                <Card key={index}>
-                  <CardHeader className="pb-2">
-                    <div className="flex justify-between items-start flex-wrap gap-2">
+        <div className="relative mx-auto max-w-4xl">
+          <div className="absolute left-5 top-0 h-full w-px bg-gradient-to-b from-cyan-400/70 via-border to-transparent" />
+          <div className="space-y-8">
+            {experiences.map((experience) => (
+              <div key={`${experience.title}-${experience.company}`} className="relative pl-14">
+                <div className="absolute left-1.5 top-6 h-4 w-4 rounded-full border border-cyan-200 bg-cyan-400" />
+                <Card className="border-border bg-card text-card-foreground shadow-2xl shadow-cyan-950/10 backdrop-blur">
+                  <CardHeader className="space-y-3">
+                    <div className="flex flex-wrap items-start justify-between gap-3">
                       <div>
-                        <h4 className="text-xl font-semibold">{exp.title}</h4>
-                        <p className="text-muted-foreground">{exp.company}</p>
+                        <h3 className="text-2xl font-semibold text-card-foreground">{experience.title}</h3>
+                        <p className="mt-1 text-muted-foreground">{experience.company}</p>
                       </div>
-                      <Badge variant="outline">{exp.period}</Badge>
+                      <Badge className="border border-cyan-400/20 bg-cyan-400/10 text-cyan-700 hover:bg-cyan-400/15 dark:text-cyan-100">
+                        {experience.period}
+                      </Badge>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <ul className="list-disc pl-5 space-y-1 text-sm">
-                      {exp.responsibilities.map((resp, idx) => (
-                        <li key={idx}>{resp}</li>
+                    <ul className="space-y-3 text-sm leading-6 text-muted-foreground">
+                      {experience.bullets.map((bullet) => (
+                        <li key={bullet} className="flex gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                          <span>{bullet}</span>
+                        </li>
                       ))}
                     </ul>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-6 text-center md:text-left mt-8 md:mt-0">Education</h3>
-            <div className="space-y-6">
-            {education.map((edu, index) => (
-                <Card key={index}>
-                  <CardHeader className="pb-2">
-                    <div className="flex justify-between items-start flex-wrap gap-2">
-                      <div>
-                        <h4 className="text-xl font-semibold">{edu.degree}</h4>
-                        <p className="text-muted-foreground">{edu.institution}</p>
-                      </div>
-                      <Badge variant="outline">{edu.period}</Badge>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="list-disc pl-5 space-y-1 text-sm">
-                      {edu.studies.map((resp, idx) => (
-                        <li key={idx}>{resp}</li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

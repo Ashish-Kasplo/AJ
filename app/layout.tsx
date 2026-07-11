@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { siteMetadata } from './metadata'
 import { Providers } from "@/components/providers"
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -20,6 +21,14 @@ export const metadata = {
     title: siteMetadata.title,
     description: siteMetadata.description,
     siteName: siteMetadata.title,
+    images: [
+      {
+        url: '/images/cover.png',
+        width: 1983,
+        height: 793,
+        alt: 'Ashish S Jadhav portfolio cover',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -42,6 +51,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   )

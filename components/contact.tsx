@@ -2,12 +2,13 @@
 
 import type React from "react"
 import { useState } from "react"
-import Head from 'next/head'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Mail, Phone, Send, Linkedin, Github, ExternalLink } from "lucide-react"
+import { contactLinks, profile, socialLinks } from "@/lib/portfolio"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -30,192 +31,198 @@ export function Contact() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      });
+      })
 
-      if (!response.ok) throw new Error('Failed to send message');
+      if (!response.ok) throw new Error("Failed to send message")
 
       setSubmitSuccess(true)
       setFormData({ name: "", email: "", subject: "", message: "" })
     } catch (error) {
-      console.error('Error sending message:', error);
-      alert('Failed to send message. Please try again.');
+      console.error("Error sending message:", error)
+      alert("Failed to send message. Please try again.")
     } finally {
       setIsSubmitting(false)
       setTimeout(() => setSubmitSuccess(false), 3000)
     }
   }
 
-  const contactInfo = [
-    {
-      icon: <Mail className="h-6 w-6 text-primary" />,
-      title: "Email",
-      value: "ashishbox13@gmail.com",
-      link: "mailto:ashishbox13@gmail.com",
-    },
-    {
-      icon: <Phone className="h-6 w-6 text-primary" />,
-      title: "Phone",
-      value: "+91-8073392045",
-      link: "tel:+918073392045",
-    },
-    {
-      icon: <MapPin className="h-6 w-6 text-primary" />,
-      title: "Location",
-      value: "Karnataka, India",
-      link: "https://maps.google.com/?q=Karnataka,+India",
-    },
-  ]
-
   return (
-    <>
-      <Head>
-        <title>Contact Ashish - Web Developer | Karnataka, India</title>
-        <meta name="description" content="Get in touch with Ashish for web development projects, collaborations, or inquiries. Based in Karnataka, India." />
-        <meta name="keywords" content="contact, web developer, Karnataka, India, freelance developer" />
-      </Head>
+    <section
+      id="contact"
+      className="border-t border-border/60 bg-muted/40 py-20 text-foreground"
+      aria-label="Contact section"
+    >
+      <div className="container mx-auto px-4">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="text-sm uppercase tracking-[0.35em] text-cyan-700 dark:text-cyan-300/80">Contact</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Let’s build the next polished frontend experience.
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-muted-foreground">
+            Reach out for product work, frontend collaboration or opportunities aligned with your experience.
+          </p>
+        </div>
 
-      <section 
-        id="contact" 
-        className="py-20 bg-muted/30"
-        aria-label="Contact section"
-        itemScope 
-        itemType="https://schema.org/ContactPage"
-      >
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl font-bold" itemProp="name">Get In Touch</h1>
-            <div className="mt-2 h-1 w-20 bg-primary mx-auto" role="presentation"></div>
-            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto" itemProp="description">
-              Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
-            </p>
-          </div>
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <Card className="border-border bg-card text-card-foreground shadow-2xl shadow-cyan-950/10 backdrop-blur">
+            <CardContent className="space-y-6 p-8">
+              <div className="space-y-2">
+                <Badge className="border border-cyan-400/20 bg-cyan-400/10 text-cyan-700 hover:bg-cyan-400/15 dark:text-cyan-100">
+                  Open to frontend roles
+                </Badge>
+                <h3 className="text-2xl font-semibold text-card-foreground">{profile.name}</h3>
+                <p className="text-muted-foreground">{profile.role}</p>
+              </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto" itemScope itemType="https://schema.org/Person">
-            {contactInfo.map((info, index) => (
-              <Card key={index}>
-                <CardContent className="flex flex-col items-center text-center p-6">
-                  <div 
-                    className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4" 
-                    aria-hidden="true"
-                  >
-                    {info.icon}
-                  </div>
-                  <h2 className="font-medium mb-1">{info.title}</h2>
-                  <a
-                    href={info.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    itemProp={info.title.toLowerCase()}
-                    aria-label={`${info.title}: ${info.value}`}
-                  >
-                    {info.value}
+              <div className="grid gap-4">
+                {contactLinks.map((item) => {
+                  const icon =
+                    item.title === "Email" ? <Mail className="h-5 w-5" /> :
+                    item.title === "Phone" ? <Phone className="h-5 w-5" /> :
+                    item.title === "LinkedIn" ? <Linkedin className="h-5 w-5" /> :
+                    <Github className="h-5 w-5" />
+
+                  return (
+                    <a
+                      key={item.title}
+                      href={item.href}
+                      target={item.title === "Email" || item.title === "Phone" ? "_self" : "_blank"}
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between gap-4 rounded-2xl border border-border bg-background px-4 py-4 transition hover:border-cyan-300/30 hover:bg-accent/40"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
+                          {icon}
+                        </div>
+                        <div>
+                          <p className="text-sm text-muted-foreground">{item.title}</p>
+                          <p className="font-medium text-card-foreground">{item.value}</p>
+                        </div>
+                      </div>
+                      <ExternalLink className="h-4 w-4 text-muted-foreground" />
+                    </a>
+                  )
+                })}
+              </div>
+
+              <div className="rounded-2xl border border-border bg-background p-4 text-sm leading-6 text-muted-foreground">
+                Based in {profile.location}. Available for frontend, product and enterprise SaaS collaboration.
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <Button asChild className="bg-cyan-500 text-slate-950 hover:bg-cyan-400">
+                  <a href={socialLinks.resume} download="Ashish_Jadhav_Full_Stack.pdf">
+                    Download Resume
                   </a>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </Button>
+                <Button asChild variant="outline" className="border-border bg-background text-foreground hover:bg-accent hover:text-accent-foreground">
+                  <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
 
-          <div className="mt-12 max-w-3xl mx-auto">
-            <Card>
-              <CardContent className="p-6">
-                <form 
-                  onSubmit={handleSubmit} 
-                  className="space-y-6"
-                  aria-label="Contact form"
-                  itemScope 
-                  itemType="https://schema.org/ContactForm"
-                >
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
-                        Your Name
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="Ashish"
-                        required
-                        aria-required="true"
-                        itemProp="name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        Your Email
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="example@gmail.com"
-                        required
-                        aria-required="true"
-                        itemProp="email"
-                      />
-                    </div>
-                  </div>
+          <Card className="border-border bg-card text-card-foreground shadow-2xl shadow-cyan-950/10 backdrop-blur">
+            <CardContent className="p-8">
+              <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+                <div className="grid gap-6 md:grid-cols-2">
                   <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">
-                      Subject
+                    <label htmlFor="name" className="text-sm font-medium text-foreground">
+                      Your Name
                     </label>
                     <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
+                      id="name"
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
-                      placeholder="Project Inquiry"
+                      placeholder="Ashish"
                       required
-                      aria-required="true"
-                      itemProp="subject"
+                      className="border-border bg-background text-foreground placeholder:text-muted-foreground"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Message
+                    <label htmlFor="email" className="text-sm font-medium text-foreground">
+                      Your Email
                     </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
                       onChange={handleChange}
-                      placeholder="Tell me about your requirement..."
-                      rows={6}
+                      placeholder="example@gmail.com"
                       required
-                      aria-required="true"
-                      itemProp="message"
+                      className="border-border bg-background text-foreground placeholder:text-muted-foreground"
                     />
                   </div>
-                  <div className="flex justify-end">
-                    <Button type="submit" disabled={isSubmitting} className="w-full md:w-auto">
-                      {isSubmitting ? "Sending..." : "Send Message"}
-                    </Button>
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="subject" className="text-sm font-medium text-foreground">
+                    Subject
+                  </label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Frontend project or collaboration"
+                    required
+                    className="border-border bg-background text-foreground placeholder:text-muted-foreground"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium text-foreground">
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell me about the role or product you want to build."
+                    rows={7}
+                    required
+                    className="border-border bg-background text-foreground placeholder:text-muted-foreground"
+                  />
+                </div>
+
+                <div className="flex justify-end">
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-cyan-500 text-slate-950 hover:bg-cyan-400 md:w-auto"
+                  >
+                    {isSubmitting ? (
+                      "Sending..."
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </div>
+
+                {submitSuccess && (
+                  <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-4 text-center text-emerald-200">
+                    Your message has been sent successfully.
                   </div>
-                  {submitSuccess && (
-                    <div 
-                      className="p-3 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-100 rounded-md text-center"
-                      role="alert"
-                      aria-live="polite"
-                    >
-                      Your message has been sent successfully!
-                    </div>
-                  )}
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+                )}
+              </form>
+            </CardContent>
+          </Card>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
