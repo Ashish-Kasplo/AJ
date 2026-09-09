@@ -1,0 +1,140 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [ 5 0 R 7 0 R ] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 6688 >>
+stream
+0.040 0.080 0.180 rg 0.00 722.00 595.00 120.00 re f
+BT /F2 24.00 Tf 1.000 1.000 1.000 rg 44.00 784.00 Td (Ashish S Jadhav) Tj ET
+BT /F1 12.00 Tf 0.800 0.950 1.000 rg 44.00 762.00 Td (Senior Frontend Engineer) Tj ET
+BT /F1 9.00 Tf 0.920 0.940 0.980 rg 44.00 742.00 Td (Bangalore, India | +91-8073392045 | ashishbox13@gmail.com |) Tj ET
+BT /F1 9.00 Tf 0.920 0.940 0.980 rg 44.00 730.00 Td (linkedin.com/in/ashish-s-jadhav | github.com/Ashish-Kasplo) Tj ET
+0.150 0.750 0.900 RG 1.20 w 44.00 720.00 m 551.00 720.00 l S
+BT /F2 13.00 Tf 0.050 0.100 0.180 rg 44.00 702.00 Td (PROFESSIONAL SUMMARY) Tj ET
+0.150 0.750 0.900 RG 1.00 w 44.00 698.00 m 116.00 698.00 l S
+BT /F1 10.10 Tf 0.000 0.000 0.000 rg 44.00 684.00 Td (Frontend Engineer with 3+ years of experience building scalable enterprise SaaS products using) Tj ET
+BT /F1 10.10 Tf 0.000 0.000 0.000 rg 44.00 672.10 Td (React, Next.js, TypeScript, Redux Toolkit and modern frontend architecture. Strong in reusable) Tj ET
+BT /F1 10.10 Tf 0.000 0.000 0.000 rg 44.00 660.20 Td (component libraries, design systems, workflow builders, AI-assisted editors, analytics) Tj ET
+BT /F1 10.10 Tf 0.000 0.000 0.000 rg 44.00 648.30 Td (dashboards, responsive interfaces and performance optimization. Working backend knowledge) Tj ET
+BT /F1 10.10 Tf 0.000 0.000 0.000 rg 44.00 636.40 Td (includes Node.js, Golang, Redis, MySQL, PostgreSQL, MongoDB and ClickHouse, which helps) Tj ET
+BT /F1 10.10 Tf 0.000 0.000 0.000 rg 44.00 624.50 Td (collaborate effectively across the stack when needed.) Tj ET
+BT /F2 13.00 Tf 0.050 0.100 0.180 rg 44.00 610.60 Td (CORE SKILLS) Tj ET
+0.150 0.750 0.900 RG 1.00 w 44.00 606.60 m 116.00 606.60 l S
+BT /F2 9.80 Tf 0.050 0.100 0.180 rg 44.00 592.60 Td (Frontend: React.js, Next.js, TypeScript, JavaScript \(ES6+\), Redux Toolkit, React Query, Zustand,) Tj ET
+BT /F1 9.50 Tf 0.000 0.000 0.000 rg 44.00 580.60 Td (React Hooks, Context API, HTML5, CSS3, Tailwind CSS, Material UI, shadcn/ui, Radix UI, Framer) Tj ET
+BT /F1 9.50 Tf 0.000 0.000 0.000 rg 44.00 569.60 Td (Motion, Responsive Design, SSR/SSG) Tj ET
+BT /F2 9.80 Tf 0.050 0.100 0.180 rg 44.00 555.60 Td (UI Systems: Reusable Components, Custom Hooks, Design Systems, Code Splitting, Lazy Loading,) Tj ET
+BT /F1 9.50 Tf 0.000 0.000 0.000 rg 44.00 543.60 Td (Virtualization, Accessibility, SEO, PWA, REST APIs, GraphQL, Axios, Performance Optimization) Tj ET
+BT /F2 9.80 Tf 0.050 0.100 0.180 rg 44.00 529.60 Td (Testing/Tooling: Jest, React Testing Library, Cypress, Storybook, Git, ESLint, Prettier, Vite,) Tj ET
+BT /F1 9.50 Tf 0.000 0.000 0.000 rg 44.00 517.60 Td (Webpack, Figma, JIRA) Tj ET
+BT /F2 9.80 Tf 0.050 0.100 0.180 rg 44.00 503.60 Td (Backend/Data: Node.js, Golang, Redis, MySQL, PostgreSQL, MongoDB, ClickHouse, AWS, Docker, API) Tj ET
+BT /F1 9.50 Tf 0.000 0.000 0.000 rg 44.00 491.60 Td (Integration) Tj ET
+BT /F2 13.00 Tf 0.050 0.100 0.180 rg 44.00 477.60 Td (PROFESSIONAL EXPERIENCE) Tj ET
+0.150 0.750 0.900 RG 1.00 w 44.00 473.60 m 116.00 473.60 l S
+BT /F2 10.20 Tf 0.050 0.100 0.180 rg 44.00 459.60 Td (Software Engineer | Kasplo Pvt Ltd | Mar 2024 - Present) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 447.60 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 447.60 Td (Owned frontend architecture and implementation across Marketing Automation, Campaign Management,) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 436.35 Td (Audience, Analytics, Reporting and Template Management modules.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 423.10 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 423.10 Td (Built enterprise Email, SMS and WhatsApp builders with AI-assisted content generation, media) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 411.85 Td (libraries, live previews, personalization and scheduling.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 398.60 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 398.60 Td (Architected reusable React components, custom hooks, TypeScript utilities and shared UI patterns to) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 387.35 Td (accelerate feature delivery.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 374.10 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 374.10 Td (Built complex workflow builders, configurable automation nodes, dynamic forms and high-performance) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 362.85 Td (dashboards.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 349.60 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 349.60 Td (Optimized rendering, API orchestration and state management, improving application performance by) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 338.35 Td (approximately 30%.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 325.10 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 325.10 Td (Worked with backend systems in Golang, Node.js, Redis, MySQL and ClickHouse when product delivery) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 313.85 Td (needed full-stack coordination.) Tj ET
+BT /F2 10.20 Tf 0.050 0.100 0.180 rg 44.00 296.60 Td (Junior Software Engineer | Kasplo Pvt Ltd | Dec 2023 - Mar 2024) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 284.60 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 284.60 Td (Built reusable React components, responsive dashboards and integrated REST APIs for enterprise) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 273.35 Td (applications.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 260.10 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 260.10 Td (Helped establish cleaner frontend implementation standards for product modules that needed rapid) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 248.85 Td (iteration.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 235.60 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 235.60 Td (Partnered with design and QA to improve UI consistency, interactions and release confidence.) Tj ET
+BT /F2 10.20 Tf 0.050 0.100 0.180 rg 44.00 218.35 Td (Software Engineering Intern | Parinitha Technologies | Jul 2023 - Nov 2023) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 206.35 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 206.35 Td (Developed MERN applications with reusable UI components and responsive interfaces.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 193.10 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 193.10 Td (Gained hands-on experience in implementation, debugging and sprint-based delivery.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 179.85 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 179.85 Td (Built early confidence in frontend development, component thinking and working with APIs.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 3586 >>
+stream
+BT /F2 13.00 Tf 0.050 0.100 0.180 rg 44.00 804.00 Td (KEY PROJECTS) Tj ET
+0.150 0.750 0.900 RG 1.00 w 44.00 800.00 m 116.00 800.00 l S
+BT /F2 9.70 Tf 0.050 0.100 0.180 rg 44.00 786.00 Td (Marketing Automation Platform - Visual workflow builder, analytics, reporting and reusable) Tj ET
+BT /F1 9.40 Tf 0.000 0.000 0.000 rg 44.00 775.00 Td (node-based architecture for enterprise campaign delivery.) Tj ET
+BT /F1 9.00 Tf 0.100 0.350 0.550 rg 56.00 765.00 Td (Tech: React, Next.js, TypeScript, Redux Toolkit, Workflow Builder, Analytics) Tj ET
+BT /F2 9.70 Tf 0.050 0.100 0.180 rg 44.00 751.00 Td (AI Email / SMS / WhatsApp Builder - Rich editors with AI assistance, media libraries,) Tj ET
+BT /F1 9.40 Tf 0.000 0.000 0.000 rg 44.00 740.00 Td (personalization, scheduling and live previews for omnichannel messaging.) Tj ET
+BT /F1 9.00 Tf 0.100 0.350 0.550 rg 56.00 730.00 Td (Tech: React, TypeScript, Framer Motion, AI-assisted UI, Reusable Components, Live Preview) Tj ET
+BT /F2 9.70 Tf 0.050 0.100 0.180 rg 44.00 716.00 Td (Email Intelligence Platform - Advanced analytics dashboards for delivery performance,) Tj ET
+BT /F1 9.40 Tf 0.000 0.000 0.000 rg 44.00 705.00 Td (engagement metrics and operational reporting.) Tj ET
+BT /F1 9.00 Tf 0.100 0.350 0.550 rg 56.00 695.00 Td (Tech: Dashboarding, Analytics, Data Visualization, Performance, Charts) Tj ET
+BT /F2 9.70 Tf 0.050 0.100 0.180 rg 44.00 681.00 Td (Transactional Messaging Platform - Template management, delivery tracking and enterprise) Tj ET
+BT /F1 9.40 Tf 0.000 0.000 0.000 rg 44.00 670.00 Td (messaging UI for reliable transactional communication.) Tj ET
+BT /F1 9.00 Tf 0.100 0.350 0.550 rg 56.00 660.00 Td (Tech: Messaging, Templates, Delivery Tracking, Enterprise UI, Reusable UI) Tj ET
+BT /F2 9.70 Tf 0.050 0.100 0.180 rg 44.00 646.00 Td (Reviews Platform - Customer review workflow interfaces that support moderation, management and) Tj ET
+BT /F1 9.40 Tf 0.000 0.000 0.000 rg 44.00 635.00 Td (product feedback operations.) Tj ET
+BT /F1 9.00 Tf 0.100 0.350 0.550 rg 56.00 625.00 Td (Tech: Product UI, Workflow, Operations, Customer Feedback, Admin UX) Tj ET
+BT /F2 13.00 Tf 0.050 0.100 0.180 rg 44.00 611.00 Td (ACHIEVEMENTS) Tj ET
+0.150 0.750 0.900 RG 1.00 w 44.00 607.00 m 116.00 607.00 l S
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 593.00 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 593.00 Td (Reduced render cost and improved application responsiveness across production product modules by) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 581.75 Td (approximately 30%.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 568.50 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 568.50 Td (Contributed to enterprise SaaS products that supported significant business growth.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 555.25 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 555.25 Td (Standardized shared components, hooks and patterns across multiple frontend modules.) Tj ET
+BT /F1 10.25 Tf 0.150 0.750 0.900 rg 44.00 542.00 Td (-) Tj ET
+BT /F1 9.25 Tf 0.000 0.000 0.000 rg 56.00 542.00 Td (Shipped production-ready Email, SMS, WhatsApp, Automation and Analytics experiences.) Tj ET
+BT /F2 13.00 Tf 0.050 0.100 0.180 rg 44.00 528.75 Td (EDUCATION) Tj ET
+0.150 0.750 0.900 RG 1.00 w 44.00 524.75 m 116.00 524.75 l S
+BT /F1 10.00 Tf 0.000 0.000 0.000 rg 44.00 510.75 Td (Bachelor of Computer Applications \(BCA\) | Jain University | 2020 - 2023) Tj ET
+BT /F1 9.20 Tf 0.200 0.200 0.200 rg 44.00 496.75 Td (Frontend focus with supporting backend knowledge across modern product systems.) Tj ET
+endstream
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000129 00000 n 
+0000000199 00000 n 
+0000000274 00000 n 
+0000000410 00000 n 
+0000007150 00000 n 
+0000007286 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+10924
+%%EOF

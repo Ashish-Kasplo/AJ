@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules/
 .next/
 out/
@@ -7,3 +8,32 @@ out/
 .DS_Store
 playwright-report/
 test-results/
+=======
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+>>>>>>> df9018faa2af0cf98dddad1757770694b4d358d1
