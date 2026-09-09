@@ -18,3 +18,5 @@ export const useMobile = () => {
 
   return isMobile
 }
+
+export const useIsMobile = useMobile
