@@ -1,6 +1,6 @@
 "use client"
 
-import { ThemeProvider } from "next-themes"
+import { ThemeProvider, useTheme as useNextTheme } from "next-themes"
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -13,4 +13,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
       {children}
     </ThemeProvider>
   )
+}
+
+export function useTheme() {
+  const { theme, setTheme } = useNextTheme()
+
+  return {
+    theme: theme === "light" ? "light" : "dark",
+    changeTheme: (value: "dark" | "light") => setTheme(value),
+  }
 }
