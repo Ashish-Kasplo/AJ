@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { profile } from "@/data/portfolio";
 import { Providers } from "@/components/Providers";
+import "../styles/globals.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
